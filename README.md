@@ -1,4 +1,4 @@
-# Welcome to TS Mentoring School Preview!
+# Welcome to TS Mentoring School Overview!
 
 ## Install dependencies
 
