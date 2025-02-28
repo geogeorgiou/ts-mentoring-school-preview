@@ -1,11 +1,27 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Welcome to TS Mentoring School Preview!
 
-To start the slide show:
+## Install dependencies
 
-- `pnpm install`
-- `pnpm dev`
-- visit <http://localhost:3030>
+```bash
+pnpm install
+```
 
-Edit the [slides.md](./slides.md) to see the changes.
+## How to run this ?
 
-Learn more about Slidev at the [documentation](https://sli.dev/).
+```bash
+pnpm dev
+```
+
+- visit <http://localhost:3030> to see the slides
+
+## How to edit the slides ?
+
+Edit the [slides.md](./slides.md) to see the changes
+or create your own slides in the [pages](./pages) folder and import them in the [slides.md](./slides.md) file.
+
+# Tech
+
+- [Slidev](https://github.com/slidevjs/slidev)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [pnpm](https://pnpm.io/)

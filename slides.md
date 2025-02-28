@@ -1,40 +1,28 @@
 ---
-# You can also start simply with 'default'
 theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
-# some information about your slides (markdown enabled)
-title: Welcome to Slidev
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
+background: /intro.png
+title: TS Mentoring School Preview
 
-  Learn more at [Sli.dev](https://sli.dev)
-# apply unocss classes to the current slide
+fonts:
+  sans: "chalet-new-york-sixty"
+  serif: "Montserrat"
+  mono: "chalet-new-york-sixty"
+
 class: text-center
-# https://sli.dev/features/drawing
 drawings:
   persist: false
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
-# enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
 ---
 
-# Welcome to Slidev
-
-Presentation slides for developers
+# TS Mentoring School Preview
 
 <div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
-  Press Space for next page <carbon:arrow-right />
+  Let's dive in! <carbon:arrow-right />
 </div>
 
-<div class="abs-br m-6 text-xl">
-  <button @click="$slidev.nav.openInEditor" title="Open in Editor" class="slidev-icon-btn">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
+<div class="abs-bl m-6 text-xl">
+  <a href="https://github.com/agileactors/ts-workshop" target="_blank" class="slidev-icon-btn">
     <carbon:logo-github />
   </a>
 </div>
@@ -44,131 +32,40 @@ The last comment block of each slide will be treated as slide notes. It will be 
 -->
 
 ---
-transition: fade-out
+transition: slide-left
+src: ./pages/intro.md
+hide: false
 ---
-
-# What is Slidev?
-
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/features/slide-scope-style
--->
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
-
-<!--
-Here is another comment.
--->
 
 ---
 transition: slide-up
 level: 2
-layout: two-cols
-layoutClass: gap-16
----
-
-
-# Table of contents
-
-You can use the `Toc` component to generate a table of contents for your slides:
-
-```html
-<Toc minDepth="1" maxDepth="1" />
-```
-
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
-
-::right::
-
-<Toc text-sm minDepth="1" maxDepth="2" />
-
----
 layout: image-right
-image: https://cover.sli.dev
+image: /repo-anatomy.png
 ---
 
-# Code
+# GH Repo Anatomy 🩻
 
-Use code snippets and get the highlighting directly, and even types hover!
+<br/>
 
-```ts {all|5|7|7-8|10|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-
-[Learn more](https://sli.dev/features/line-highlighting)
-
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
-<!--
-Notes can also sync with clicks
-
-[click] This will be highlighted after the first click
-
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
--->
-
----
-foo: bar
-dragPos:
-  square: 691,32,167,_,-16
----
+- 📚 **Reading** - `<topic>/**`
+- 📝 **Exercises** - `<topic>/src/README.md`
+- 🤔 **Starter** - `<topic>/src/initial.ts`
+- 🤩 **Solutions** - `<topic>/src/final.ts`
 
 
 ---
-src: ./pages/imported-slides.md
+src: ./pages/ts-intermediate-preview.md
+hide: false
+---
+
+---
+src: ./pages/aknowledgments.md
+hide: false
+---
+
+---
+src: ./pages/qna.md
 hide: false
 ---
 
@@ -180,6 +77,6 @@ class: text-center
 # Learn More
 
 <!-- //TODO STACKBLITZ REPO -->
-[AA Training Material](https://sli.dev) · [Stackblitz Repo](https://github.com/slidevjs/slidev)
+[AA Training Material](https://typescript--aa-trainings.netlify.app/) · [Github Repo](https://github.com/agileactors/ts-workshop)
 
 <PoweredBySlidev mt-10 />
